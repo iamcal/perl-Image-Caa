@@ -3,38 +3,35 @@ package Image::Caa;
 use strict;
 use warnings;
 
-our $VERSION = '1.00';
+our $VERSION = '1.01';
 
-use constant {
+# dark colors
+use constant CAA_COLOR_BLACK		=> 0;
+use constant CAA_COLOR_RED		=> 1;
+use constant CAA_COLOR_GREEN		=> 2;
+use constant CAA_COLOR_YELLOW		=> 3;
+use constant CAA_COLOR_BLUE		=> 4;
+use constant CAA_COLOR_MAGENTA		=> 5;
+use constant CAA_COLOR_CYAN		=> 6;
+use constant CAA_COLOR_LIGHTGRAY	=> 7;
 
-	# dark colors
-	CAA_COLOR_BLACK		=> 0,
-	CAA_COLOR_RED		=> 1,
-	CAA_COLOR_GREEN		=> 2,
-	CAA_COLOR_YELLOW	=> 3,
-	CAA_COLOR_BLUE		=> 4,
-	CAA_COLOR_MAGENTA	=> 5,
-	CAA_COLOR_CYAN		=> 6,
-	CAA_COLOR_LIGHTGRAY	=> 7,
+# light colors
+use constant CAA_COLOR_DARKGRAY		=> 8;
+use constant CAA_COLOR_LIGHTRED		=> 9;
+use constant CAA_COLOR_LIGHTGREEN	=> 10;
+use constant CAA_COLOR_BROWN		=> 11;
+use constant CAA_COLOR_LIGHTBLUE	=> 12;
+use constant CAA_COLOR_LIGHTMAGENTA	=> 13;
+use constant CAA_COLOR_LIGHTCYAN	=> 14;
+use constant CAA_COLOR_WHITE		=> 15;
 
-	# light colors
-	CAA_COLOR_DARKGRAY	=> 8,
-	CAA_COLOR_LIGHTRED	=> 9,
-	CAA_COLOR_LIGHTGREEN	=> 10,
-	CAA_COLOR_BROWN		=> 11,
-	CAA_COLOR_LIGHTBLUE	=> 12,
-	CAA_COLOR_LIGHTMAGENTA	=> 13,
-	CAA_COLOR_LIGHTCYAN	=> 14,
-	CAA_COLOR_WHITE		=> 15,
+use constant CAA_LOOKUP_VAL		=> 32;
+use constant CAA_LOOKUP_SAT		=> 32;
+use constant CAA_LOOKUP_HUE		=> 16;
 
-	CAA_LOOKUP_VAL		=> 32,
-	CAA_LOOKUP_SAT		=> 32,
-	CAA_LOOKUP_HUE		=> 16,
-
-	CAA_HSV_XRATIO		=> 6,
-	CAA_HSV_YRATIO		=> 3,
-	CAA_HSV_HRATIO		=> 3,
-};
+use constant CAA_HSV_XRATIO		=> 6;
+use constant CAA_HSV_YRATIO		=> 3;
+use constant CAA_HSV_HRATIO		=> 3;
 
 
 sub new {
